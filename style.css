@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    /* paragraphs */
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    /* background, headings, buttons */
+    --very-light-gray: hsl(0, 0%, 95%);
+    --font-lexend-deca: 'Lexend Deca', sans-serif;
+    --font-big-shoulders: 'Big Shoulders Display', cursive;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 87vw;
+    margin: 85px auto;
+    
+}
+
+section {
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+
+}
+
+img {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.sedan {
+    background-color: var(--bright-orange);
+    border-radius: 8px 8px 0 0 ;
+}
+
+.suv {
+    background-color: var(--dark-cyan);
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 0 8px 8px  ;
+}
+
+h1 {
+    color: var(--very-light-gray);
+    font-family: 'Big Shoulders Display';
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 30px 27px 27px;
+}
+
+p {
+    color: var(--transparent-white);
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 0 27px;
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+}
+
+button {
+    padding: 13px 30px;
+    border-radius: 30px;
+    border: 1px solid white;
+    margin: 30px;
+    font-size: 0.95rem;
+
+}
+
+.sedan button:hover,
+.suv button:hover,
+.luxury button:hover {
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.sedan button {
+    color: var(--bright-orange)
+}
+
+.suv button {
+    color: var(--dark-cyan);
+}
+
+.luxury button {
+    color: var(--very-dark-cyan);
+}
+
+@media only screen and (min-width:800px) {
+    main {
+        flex-direction: row;
+        width: 64vw;
+        margin: 170px auto;
+    }
+
+    section {
+        min-width: 300px;
+    }
+
+    button {
+        margin: 85px 30px 30px;
+    }
+    .sedan{
+        border-radius: 8px 0 0 8px;
+    }
+    .luxury{
+        border-radius: 0 8px 8px 0;
+    }
+}
